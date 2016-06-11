@@ -43,19 +43,14 @@ def current_data():
     return result
 
 
-def current_data_bad_response():
-    """ uh oh, something went wrong!"""
-    raise ConnectionAbortedError
-
-
 def get_data():
     try:
-        return current_data_bad_response()
-    except ConnectionAbortedError as ex:
-        print("Error: connection aborted")
+        return {'data': current_data(), 'errors': None}
+    except Exception as ex:
+        error = "{0}".format(ex)
         ''' Magic retry logic'''
+        return {'data': None, 'errors': error}
     finally:
-        print("Closing connection")
         ''' Magic connection closer '''
 
 if __name__ == '__main__':
