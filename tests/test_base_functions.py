@@ -70,7 +70,6 @@ class AppTest(unittest.TestCase):
         """ When you don't know what values might be, can check types"""
         res = app.get_data()
         data = res['data']
-        error = res['errors']
         self.assertIsInstance(data['gps'], tuple)
         self.assertIsInstance(data['gps'][0], float)
         self.assertIsInstance(data['gps'][0], float)
