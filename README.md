@@ -12,3 +12,9 @@ python -m discover tests
 
 The application itself doesn't really do anything, so don't worry about running it directly.
 
+## Master
+On the right under README BADGE:  
+[![Coverage Status](https://coveralls.io/repos/github/Plantalytics/automation-example/badge.svg?branch=master)](https://coveralls.io/github/Plantalytics/automation-example?branch=master)
+
+Click the badge at the top next to the repo name and select Markdown from the second dropdown:  
+[![Build Status](https://travis-ci.org/Plantalytics/automation-example.svg?branch=master)](https://travis-ci.org/Plantalytics/automation-example)
